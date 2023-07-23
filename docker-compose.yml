@@ -1,0 +1,50 @@
+version: '3'
+
+networks:
+  wp-net:
+
+
+services:
+
+  db:
+    image: mysql:8.0.33
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: P@ssword123
+      MYSQL_USER: wp_user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: wordpress_db
+    ports:
+      - 8001:3306
+    networks:
+      - wp-net
+    volumes:
+      - ./db-data/:/var/lib/mysql/
+
+  wordpress:
+    image: wordpress:php8.0-fpm-alpine
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wp_user
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DB_NAME: wordpress_db
+    volumes:
+      - ./wordpress/:/var/www/html/
+    ports:
+      - 8003:80
+      - 9000:9000
+    depends_on:
+      - db
+    networks:
+      - wp-net
+
+  web-server:
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/config/:/etc/nginx/conf.d/
+      - ./wordpress/:/var/www/html/
+      - ./nginx/logs/:/var/log/nginx/
+    networks:
+      - wp-net
