@@ -13,13 +13,13 @@ services:
       MYSQL_ROOT_PASSWORD: P@ssword123
       MYSQL_USER: wp_user
       MYSQL_PASSWORD: password
-      MYSQL_DATABASE: wordpress_db
+      MYSQL_DATABASE: website_db
     ports:
       - 8001:3306
     networks:
       - wp-net
     volumes:
-      - ./databases/db-data/:/var/lib/mysql/
+      - ./db-data/:/var/lib/mysql/
 
   wordpress:
     image: wordpress:php8.0-fpm-alpine
@@ -27,7 +27,7 @@ services:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wp_user
       WORDPRESS_DB_PASSWORD: password
-      WORDPRESS_DB_NAME: wordpress_db
+      WORDPRESS_DB_NAME: website_db
     volumes:
       - ./wordpress/:/var/www/html/
     ports:

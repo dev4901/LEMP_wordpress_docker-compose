@@ -366,3 +366,23 @@
 2023/07/23 20:28:19 [notice] 1#1: worker process 20 exited with code 0
 2023/07/23 20:28:19 [notice] 1#1: worker process 21 exited with code 0
 2023/07/23 20:28:19 [notice] 1#1: exit
+2023/07/24 08:03:57 [warn] 1#1: conflicting server name "abc.com" on 0.0.0.0:80, ignored
+2023/07/24 08:03:57 [notice] 1#1: using the "epoll" event method
+2023/07/24 08:03:57 [notice] 1#1: nginx/1.25.1
+2023/07/24 08:03:57 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/07/24 08:03:57 [notice] 1#1: OS: Linux 5.15.0-1039-aws
+2023/07/24 08:03:57 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/07/24 08:03:57 [notice] 1#1: start worker processes
+2023/07/24 08:03:57 [notice] 1#1: start worker process 20
+2023/07/24 08:03:57 [notice] 1#1: start worker process 21
+2023/07/24 09:28:29 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2023/07/24 09:28:29 [notice] 21#21: gracefully shutting down
+2023/07/24 09:28:29 [notice] 21#21: exiting
+2023/07/24 09:28:29 [notice] 21#21: exit
+2023/07/24 09:28:29 [notice] 20#20: gracefully shutting down
+2023/07/24 09:28:29 [notice] 20#20: exiting
+2023/07/24 09:28:29 [notice] 20#20: exit
+2023/07/24 09:28:29 [notice] 1#1: signal 17 (SIGCHLD) received from 21
+2023/07/24 09:28:29 [notice] 1#1: worker process 21 exited with code 0
+2023/07/24 09:28:29 [notice] 1#1: worker process 20 exited with code 0
+2023/07/24 09:28:29 [notice] 1#1: exit

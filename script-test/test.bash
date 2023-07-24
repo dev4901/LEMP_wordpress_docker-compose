@@ -1,12 +1,12 @@
 #!/bin/bash
 
-domain="pqr.io"
-pub_ip="127.0.0.1" 
-hosts_string="${pub_ip} ${domain}"
-sed -e "2s/^/${hosts_string}\n/" hosts-copy
+# domain="pqr.io"
+# pub_ip="127.0.0.1" 
+# hosts_string="${pub_ip} ${domain}"
+# sed -e "2s/^/${hosts_string}\n/" hosts-copy
 
-# loc="db-sds"
-# if [ -d "../databases/${loc}" ]; then
+# loc="db-data"
+# if [ -d "${loc}" ]; then
 #     echo "dir is present"
 # else
 #     echo "dir absent"
