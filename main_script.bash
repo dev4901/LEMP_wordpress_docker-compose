@@ -7,7 +7,9 @@ if command -v docker compose &> /dev/null; then
 	    echo "this will install docker-compose"
         curl https://get.docker.com/ > install_docker.sh
         chmod u+x install_docker.sh
-        sh install_docker.sh
+        sudo sh install_docker.sh
+        sudo usermod -aG docker ${USER}
+        newgrp docker
 fi
 
 if [ "$1" == "domain" ]; then
@@ -111,7 +113,7 @@ if [ "$1" == "enable" ]; then
         dom_dc_file="docker-compose-${dom_dash}.yml"
         docker compose -f ${dom_dc_file} up -d
     else
-        echo "the website doesn't exist"
+        echo "the website doesn't exist, create it using 'domain' as an argument while running this script"
     fi
 
     
@@ -124,7 +126,7 @@ elif [ "$1" == "disable" ]; then
         dom_dc_file="docker-compose-${dom_dash}.yml"
         docker compose -f ${dom_dc_file} down
     else
-        echo "the website doesn't exist"
+        echo "the website doesn't exist, create it using 'domain' as an argument while running this script"
     fi
 fi
 
@@ -139,7 +141,7 @@ if [ "$1" == "delete" ]; then
         docker rm $(docker ps -aq) 2> /dev/null
         sudo rm -rf $dom_dash/ ; echo "deleted the $dom_dash directory"
     else
-        echo "the website doesn't exist"
+        echo "the website doesn't exist, create it using 'domain' as an argument while running this script"
     fi
 fi
 
