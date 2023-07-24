@@ -8,7 +8,7 @@ Created a script that'll take domain name as user input and give out a wordpress
   
   3 - delete a website
 
-Instructions to use them:
+### Instructions to use them:
 <details>
 
 <summary>Create a new website</summary>
@@ -17,9 +17,16 @@ Step 1 - Run this command while you are inside this folder
 ```bash 
 bash main_script.sh domain 
 ```
+![Alt Running the script](https://github.com/dev4901/lemp_wordpress_docker-compose/blob/master/readme_pictures/f1-s1-1.png)
 
-Step 2a - If you've docker installed on your system, then you'll get the option to enter domain name for your website.
+Step 2a - If you've docker installed on your system, then you'll get the option to enter domain name for your website. Like this
 
+![Alt Running the script](https://github.com/dev4901/lemp_wordpress_docker-compose/blob/master/readme_pictures/f1-s1-2.png)
+
+Step 2b - If you dont have docker installed on the system, it'll install it for you.
+
+![Alt Running the script](https://github.com/dev4901/lemp_wordpress_docker-compose/blob/master/readme_pictures/f1-s2-1.png)
+![Alt Running the script](https://github.com/dev4901/lemp_wordpress_docker-compose/blob/master/readme_pictures/f1-s2-2.png)
 </details>
 
 <details> 
