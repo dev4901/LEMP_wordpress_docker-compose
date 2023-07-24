@@ -4,11 +4,11 @@ Created a script that'll take domain name as user input and give out a wordpress
 ### This script has 3 main functions:
   1 - create new website for new domain.
 
-  2 - enable/disable existing domain website if present in the directory
+  2 - enable/disable existing website i.e. present in the directory
   
-  3 - delete a website data
+  3 - delete a website
 
-Steps to test it:
+Instructions to use them:
 <details>
 
 <summary>Create a new website</summary>
@@ -20,4 +20,12 @@ bash main_script.sh domain
 
 Step 2a - If you've docker installed on your system, then you'll get the option to enter domain name for your website.
 
+</details>
+
+<details> 
+<summary>Enable/Disable existing websites</summary>
+</details>
+
+<details> 
+<summary>Delete existing website</summary>
 </details>
