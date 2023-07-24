@@ -5,3 +5,7 @@ This script has 3 main functions:
   1 - create new website for new domain
   2 - enable/disable existing domain website if present in the directory
   3 - delete a website data
+Steps to test it:
+1. Create a new website
+Step 1 - Run "bash main_script.sh domain"
+Step 2a - If you've docker installed on your system, then you'll get the option to enter domain name for your website.
