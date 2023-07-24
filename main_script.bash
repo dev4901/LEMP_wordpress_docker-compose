@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if command -v docker compose &> /dev/null; then
+if command -v docker &> /dev/null; then
         echo "Docker Compose is installed on the system."
     else
         echo "Docker Compose is not installed on the system."
