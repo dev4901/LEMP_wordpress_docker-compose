@@ -5,8 +5,9 @@ if command -v docker compose &> /dev/null; then
     else
         echo "Docker Compose is not installed on the system."
 	    echo "this will install docker-compose"
-#	apt update
-#	apt install docker-compose -y
+        curl https://get.docker.com/ > install_docker.sh
+        chmod u+x install_docker.sh
+        sh install_docker.sh
 fi
 
 if [ "$1" == "domain" ]; then
@@ -50,7 +51,7 @@ if [ "$1" == "domain" ]; then
             # echo "value not 0"
             exit 1
         else
-            echo "have successfully started docker compose and you can access your website at $domain!!" 
+            echo "have successfully started docker compose and you can access your website at $domain !!" 
     fi
 
 fi
@@ -58,9 +59,13 @@ fi
 if [ "$1" == "enable" ]; then
     docker compose up -d
 elif [ "$1" == "disable" ]; then
-    docker compose down
+    docker compose stop
 fi
 
+if [ "$1" == "delete"]; then
+    docker compose down
+    docker rm $(docker ps -aq)
+fi
 echo "enter correct argument"
 
 

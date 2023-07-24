@@ -1,11 +1,22 @@
 #!/bin/bash
 
-if ! [ -z "$1" ]; then
-    echo "arg not given"
-else
-    echo "arg is given"
+domain="abc.io"
+dom_dash=$(echo $domain | sed 's/\./-/')
+echo $domain
+echo $dom_dash
+# loc="db-sds"
+# if [ -d "../databases/${loc}" ]; then
+#     echo "dir is present"
+# else
+#     echo "dir absent"
+# fi
 
-fi
+# if [ -d "${value}-data" ]; then
+#     echo "directory is present"
+# else
+#     echo "directory absent"
+
+# fi
 
 # ls -la &> /dev/null
 # value="$?"

@@ -19,7 +19,7 @@ services:
     networks:
       - wp-net
     volumes:
-      - ./db-data/:/var/lib/mysql/
+      - ./databases/db-data/:/var/lib/mysql/
 
   wordpress:
     image: wordpress:php8.0-fpm-alpine
