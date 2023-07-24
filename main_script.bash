@@ -16,11 +16,11 @@ if [ "$1" == "domain" ]; then
 
     dom_dash=$(echo $domain | sed 's/\./-/')
     pub_ip="localhost" 
-
+    hosts_string="${pub_ip} ${domain}"
     echo "name of your website is $domain"
 
     #adding domain to the /etc/hosts file
-    sudo sed -i "2s/^/${pub_ip} ${domain}\n/" /etc/hosts 2> errors.txt
+    sudo sed -i "2s/^/${hosts_string}\n/" /etc/hosts 2> errors.txt
     value="$?"
     # echo "$value"
     if [[ "$value" -ne 0 ]]; then
