@@ -38,8 +38,28 @@ bash main_script.sh domain
 
 <details> 
 <summary>Enable/Disable existing websites</summary>
+
+1. To start a website, write the following command
+```bash
+bash main_script.bash enable <domain_name>
+```   
+![Alt enabling a website](https://github.com/dev4901/lemp_wordpress_docker-compose/blob/master/readme_pictures/f2-s1.png)
+
+2. To stop a running website without deleting its data, write
+```bash
+bash main_script.bash disable <domain_name>
+```
+![Alt enabling a website](https://github.com/dev4901/lemp_wordpress_docker-compose/blob/master/readme_pictures/f2-s2.png)
+
 </details>
 
 <details> 
 <summary>Delete existing website</summary>
+
+With this we can delete a website irrelevant to whether it is enabled/disabled. It'll stop it's containers (if running) and then delete the directory of that website
+```bash
+bash main_script.bash delete <domain_name>
+```
+![Alt enabling a website](https://github.com/dev4901/lemp_wordpress_docker-compose/blob/master/readme_pictures/f3.png)
+
 </details>
